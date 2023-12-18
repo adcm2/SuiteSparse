@@ -40,8 +40,9 @@ set ( SUITESPARSE_EXTRA_PROJECTS
 # lower-case list of known projects that can be built by this root CMake file
 set ( SUITESPARSE_KNOWN_PROJECTS "${SUITESPARSE_ALL_PROJECTS};${SUITESPARSE_EXTRA_PROJECTS}" )
 
-set ( SUITESPARSE_ENABLE_PROJECTS "all" CACHE STRING
-    "Semicolon-separated list of SuiteSparse projects to be built (${SUITESPARSE_KNOWN_PROJECTS}, or \"all\")" )
+# set ( SUITESPARSE_ENABLE_PROJECTS "all" CACHE STRING
+    # "Semicolon-separated list of SuiteSparse projects to be built (${SUITESPARSE_KNOWN_PROJECTS}, or \"all\")" )
+set (SUITESPARSE_ENABLE_PROJECTS "suitesparse_config;mongoose;amd;btf;camd;ccolamd;colamd;cholmod;cxsparse;ldl;klu;umfpack;paru;rbio;spqr;spex;graphblas;lagraph" )
 
 # expand "all" early on
 if ( "all" IN_LIST SUITESPARSE_ENABLE_PROJECTS )
